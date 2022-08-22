@@ -1,0 +1,16 @@
+#personalForm{
+    align-self: center;
+    display: grid;
+    grid-template-rows: repeat(3,2em);
+    row-gap: 20%;
+    min-width: 65%;
+    max-width: 6em;
+
+}
+#descriptionInput{
+    height:auto;
+    min-height: 5em;
+   max-height:10em;
+   resize: vertical;
+}
+

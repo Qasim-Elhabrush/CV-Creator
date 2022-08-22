@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+  width: 4px;
+  border: 2px solid blue;
+}
+
+::-webkit-scrollbar-button:single-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgb(229, 122, 229), rgb(253, 253, 128));
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(128, 128, 128);
+}

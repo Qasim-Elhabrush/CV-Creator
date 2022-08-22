@@ -1,0 +1,17 @@
+#honorsForm{
+    align-self: center;
+    display: grid;
+    grid-template-rows: 2em 1em 2em 2em;
+    row-gap: 20%;
+    min-width: 65%;
+    max-width: 6em;
+
+}
+#honorDescription{
+    margin-top: 5%;
+    min-height: 4em;
+    max-height: 8em;
+    resize: vertical;
+}
+
+

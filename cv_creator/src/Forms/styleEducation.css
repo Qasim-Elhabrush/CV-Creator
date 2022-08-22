@@ -1,0 +1,11 @@
+#educationForm{
+    align-self: center;
+    display: grid;
+    grid-template-rows: 2em 2em 2em 1em 2em 1em 2em;
+    row-gap: 15%;
+    min-width: 65%;
+    max-width: 6em;
+
+}
+
+
