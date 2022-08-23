@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./honorStyle.css";
+import "./styleHonors.css";
 class HonorsForm extends Component {
   constructor(props) {
     super(props);

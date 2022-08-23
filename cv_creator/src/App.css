@@ -14,3 +14,8 @@
 ::-webkit-scrollbar-track {
   background: rgb(128, 128, 128);
 }
+#app{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10vw;
+}

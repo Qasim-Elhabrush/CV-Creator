@@ -1,0 +1,16 @@
+#display{ 
+    background-color: rgb(255, 255, 255);
+    height: 95%;
+    width: 80%;
+    align-self: center;   
+    font-size: .5rem;
+    border-style: solid;
+}
+#displayContent{
+    margin:4.25% 6.25%  ;
+    background-color: white;
+    height: 90.75%;
+    display: flex;
+    flex-direction: column;
+
+}
