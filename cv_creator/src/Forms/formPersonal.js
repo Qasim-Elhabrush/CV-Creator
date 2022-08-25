@@ -10,7 +10,7 @@ class PersonalForm extends Component {
   render() {
     return (
       <div className='formContainer'>
-        <div className="formTitle">Personal Details</div>
+        <div className="formTitle" >Personal Details</div>
         <form id="personalForm">
           <input type="text" id="nameInput" placeholder="Name" onChange={e=>{this.props.personalEventHandler("name",e)}}></input>
           <input type="tel" id="phoneNumberInput" placeholder="Phone Number" onChange={e=>{this.props.personalEventHandler("phoneNumber",e)}}></input>

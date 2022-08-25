@@ -13,7 +13,7 @@ class Display extends Component {
       <div id="display">
         <div id="displayContent">
           <PersonalDisplay name ={this.props.state.personal.name} number = {this.props.state.personal.phoneNumber} email = {this.props.state.personal.email} description = {this.props.state.personal.description}/>
-          {this.props.state.educations.map(education=><EducationDisplay nameOfSchool = {education.nameOfSchool} major = {education.major} gpa = {education.GPA} startDate={education.StartDate} endDate={education.endDate}/>
+          {this.props.state.educations.map(education=><EducationDisplay nameOfSchool = {education.nameOfSchool} major = {education.major} gpa = {education.gpa} startDate={education.startDate} endDate={education.endDate}/>
           )}
           {this.props.state.workExperiences.map(workExperience=><WorkDisplay nameOfCompany = {workExperience.nameOfCompany} startDate ={workExperience.startDate} endDate = {workExperience.endDate} responsibilities = {workExperience.responsibilities}/>
           )}
