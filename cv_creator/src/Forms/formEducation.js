@@ -13,9 +13,8 @@ class EducationForm extends Component {
       startDate: "",
       endDate: "",
     }
-
     if(this.props.state.educations.length===0){
-       this.props.addEducationObject(this.educationObject);
+       this.props.addEducationObject(this.educationObject)
     }
 
 
@@ -28,8 +27,12 @@ class EducationForm extends Component {
         <form id="educationForm">
           <input
             type="text"
-            name="nameOfSchool"
-           
+            defaultValue={this.props.state.educations.forEach(education=>{ 
+              if(education.key === this.educationObject.key){
+                return education.name
+              }}
+             )}
+            name="nameOfSchool"            
             className="nameOfSchoolInput"
             placeholder="Name of School or Program" 
             onChange={(e)=>{

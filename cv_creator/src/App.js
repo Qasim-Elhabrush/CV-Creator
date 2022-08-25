@@ -7,7 +7,7 @@ class App extends Component {
     super(props);
     this.state = {
       personal: {
-        name: "",
+        name:"",
         phoneNumber: "",
         email: "",
         description: "",
@@ -15,23 +15,35 @@ class App extends Component {
       educations: [],
       workExperiences: [],
       honorsAwards: [],
-      currentForm: 0,
+      step: 1,
+    
     };
     this.personalEventHandler = this.personalEventHandler.bind(this);
     this.addEducationObject = this.addEducationObject.bind(this);
     this.onChangeEducationHandler = this.onChangeEducationHandler.bind(this);
-    this.nextForm = this.nextForm.bind(this);
-    this.lastForm = this.lastForm.bind(this);
+    this.nextStep = this.nextStep.bind(this);
+    this.prevStep = this.prevStep.bind(this);
+  }
+  nextStep = () =>{
+    const {step} = this.state;
+    this.setState({
+        step:step+1
+    })
+  }
+  prevStep = () =>{
+    const {step} = this.state;
+    this.setState({
+        step:step-1
+    })
   }
 
   personalEventHandler(propertyName, e) {
+    const newPersonalObject = {...this.state.personal};
+    newPersonalObject[propertyName] = e.target.value;
     this.setState((prevState) => ({
-      ...prevState,
-      personal: {
-        ...prevState.personal,
-        [propertyName]: e.target.value,
-      },
+        personal:newPersonalObject
     }));
+  
   }
 
   addEducationObject(educationObject) {
@@ -54,30 +66,22 @@ class App extends Component {
       educations: newArr,
     }));
   }
-  nextForm(){
-    this.setState((prevState)=>({
-        currentForm: prevState.currentForm+1
-    }))
-  }
-  lastForm(){
-    this.setState((prevState)=>({
-        currentForm: prevState.currentForm-1
-    }))
-    
-  }
+
+ 
+
 
   render() {
     return (
       <div id="app">
         <Forms
           state={this.state}
+          nextStep = {this.nextStep}
+          prevStep={this.prevStep}
           personalEventHandler={this.personalEventHandler}
           addEducationObject={this.addEducationObject}
           onChangeEducationHandler={this.onChangeEducationHandler}
         />
         <Display state={this.state} />
-        <button onClick={this.lastForm}>Go back</button>
-        <button onClick ={this.nextForm}>Go Forward</button>
       </div>
     );
   }
