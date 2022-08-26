@@ -8,10 +8,10 @@ class WorkDisplay extends Component{
     }
     render(){
         return(<div id="workDisplay">
-            <div>{this.props.nameOfCompany}</div>
-            <div>{this.props.startDate}</div>
-            <div>{this.props.endDate}</div>
-            <div>{this.props.responsibilities}</div>
+            <div>Name of company: {this.props.nameOfCompany}</div>
+            <div>start date: {this.props.startDate}</div>
+            <div>end date: {this.props.endDate}</div>
+            <div>responsibilities: {this.props.responsibilities}</div>
         </div>)
     }
 }

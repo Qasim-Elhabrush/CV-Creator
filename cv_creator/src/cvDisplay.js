@@ -13,12 +13,12 @@ class Display extends Component {
       <div id="display">
         <div id="displayContent">
           <PersonalDisplay name ={this.props.state.personal.name} number = {this.props.state.personal.phoneNumber} email = {this.props.state.personal.email} description = {this.props.state.personal.description}/>
-          {this.props.state.educations.map(education=><EducationDisplay key={education.key} nameOfSchool = {education.nameOfSchool} major = {education.major} gpa = {education.gpa} startDate={education.startDate} endDate={education.endDate}/>
-          )}
-          {this.props.state.workExperiences.map(workExperience=><WorkDisplay nameOfCompany = {workExperience.nameOfCompany} startDate ={workExperience.startDate} endDate = {workExperience.endDate} responsibilities = {workExperience.responsibilities}/>
-          )}
-          {this.props.state.honorsAwards.map(honorAward=><HonorsDisplay nameOfAward={honorAward.nameOfAward} dateReceived={honorAward.dateReceived} description={honorAward.description}/>
-          )}
+          <EducationDisplay nameOfSchool = {this.props.state.educations.nameOfSchool} major = {this.props.state.educations.major} gpa = {this.props.state.educations.gpa} startDate={this.props.state.educations.startDate} endDate={this.props.state.educations.endDate}/>
+          
+         <WorkDisplay nameOfCompany = {this.props.state.workExperiences.nameOfCompany} startDate ={this.props.state.workExperiences.startDate} endDate = {this.props.state.workExperiences.endDate} responsibilities = {this.props.state.workExperiences.responsibilities}/>
+         
+         <HonorsDisplay nameOfAward={this.props.state.honorsAwards.awardName} dateReceived={this.props.state.honorsAwards.dateReceived} description={this.props.state.honorsAwards.description}/>
+     
         </div>
       </div>
     );

@@ -27,12 +27,13 @@ class Forms extends Component {
         return (
           <div>
             <div id="formsContainer">
+            <div className="formTitle">Education</div>
               <EducationForm
                 state={this.props.state}
-                addEducationObject={this.props.addEducationObject}
-                onChangeEducationHandler={this.props.onChangeEducationHandler}
+                onChangeEducationHandler={this.props.educationsEventHandler}
               />
             </div>
+            
 
             <button onClick={this.props.prevStep}>Back</button>
             <button onClick={this.props.nextStep}>Next</button>
@@ -42,7 +43,10 @@ class Forms extends Component {
         return (
           <div>
             <div id="formsContainer">
-              <WorkExperienceForm state={this.props.state} />
+              <WorkExperienceForm state={this.props.state}
+              workExperiencesEventHandler = {this.props.workExperiencesEventHandler}
+              
+              />
             </div>
             <button onClick={this.props.prevStep}>Back</button>{" "}
             <button onClick={this.props.nextStep}>Next</button>
@@ -52,7 +56,7 @@ class Forms extends Component {
         return (
           <div>
             <div id="formsContainer">
-              <HonorsForm state={this.props.state} />
+              <HonorsForm state={this.props.state} honorsAwardsEventHandler={this.props.honorsAwardsEventHandler} />
             </div>
             <button onClick={this.props.prevStep}>Back</button>
           </div>

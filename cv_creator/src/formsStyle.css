@@ -1,7 +1,6 @@
 #formsContainer{
-    
     width: 30vw;
-    height: 60vh;
+    min-height: 60vh;
     margin: 20%;
     border-style:solid;
     border-radius: 20px;

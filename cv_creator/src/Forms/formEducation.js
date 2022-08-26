@@ -5,48 +5,26 @@ class EducationForm extends Component {
   constructor(props) {
     super(props);
 
-    this.educationObject = {
-      key: uniqid(),
-      nameOfSchool: "",
-      major: "",
-      gpa: "",
-      startDate: "",
-      endDate: "",
-    }
-    if(this.props.state.educations.length===0){
-       this.props.addEducationObject(this.educationObject)
-    }
-
-
   }
 
   render() {
     return (
-      <div className="formContainer">
-        <div className="formTitle">Education</div>
+      <div className="formContainer">        
         <form id="educationForm">
           <input
             type="text"
-            defaultValue={this.props.state.educations.forEach(education=>{ 
-              if(education.key === this.educationObject.key){
-                return education.name
-              }}
-             )}
-            name="nameOfSchool"            
+            name="nameOfSchool"
             className="nameOfSchoolInput"
-            placeholder="Name of School or Program" 
-            onChange={(e)=>{
-              this.props.onChangeEducationHandler(this.educationObject.key,e)
-            }}
+            placeholder="Name of School or Program"
+            onChange={e=>{this.props.onChangeEducationHandler("nameOfSchool",e);}}
+              
           ></input>
 
           <input
             type="text"
             name="major"
             placeholder="Major - (ex. B.S Psychology)"
-            onChange={(e)=>{
-              this.props.onChangeEducationHandler(this.educationObject.key,e)
-            }}
+            onChange={e=>{this.props.onChangeEducationHandler("major",e);}}
           ></input>
 
           <input
@@ -54,9 +32,7 @@ class EducationForm extends Component {
             name="gpa"
             className="GPA"
             placeholder="GPA(optional)"
-            onChange={(e)=>{
-              this.props.onChangeEducationHandler(this.educationObject.key,e)
-            }}
+            onChange={e=>{this.props.onChangeEducationHandler("gpa",e);}}
           ></input>
 
           <label>Start Date</label>
@@ -64,9 +40,7 @@ class EducationForm extends Component {
             type="month"
             name="startDate"
             className="EducationStartDateInput"
-            onChange={(e)=>{
-              this.props.onChangeEducationHandler(this.educationObject.key,e)
-            }}
+            onChange={e=>{this.props.onChangeEducationHandler("startDate",e);}}
           ></input>
 
           <label>End Date</label>
@@ -74,11 +48,11 @@ class EducationForm extends Component {
             type="month"
             name="endDate"
             className="EducationEndDateInput"
-            onChange={(e)=>{
-              this.props.onChangeEducationHandler(this.educationObject.key,e)
-            }}
+            onChange={e=>{this.props.onChangeEducationHandler("endDate",e);}}
           ></input>
         </form>
+        
+       
       </div>
     );
   }

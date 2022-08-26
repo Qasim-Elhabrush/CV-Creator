@@ -12,15 +12,33 @@ class App extends Component {
         email: "",
         description: "",
       },
-      educations: [],
-      workExperiences: [],
-      honorsAwards: [],
+      educations: {
+        nameOfSchool: "",
+        major: "",
+        gpa: "",
+        startDate: "",
+        endDate: "",
+      },
+      workExperiences: {
+        nameOfCompany:"",
+        startDate:"",
+        endDate:"",
+        responsibilities:""
+
+      },
+      honorsAwards: {
+        awardName:"",
+        dateReceived:"",
+        description:""
+      },
       step: 1,
     
     };
     this.personalEventHandler = this.personalEventHandler.bind(this);
-    this.addEducationObject = this.addEducationObject.bind(this);
-    this.onChangeEducationHandler = this.onChangeEducationHandler.bind(this);
+    this.educationsEventHandler = this.educationsEventHandler.bind(this);
+    this.workExperiencesEventHandler = this.workExperiencesEventHandler.bind(this);
+    this.honorsAwardsEventHandler = this.honorsAwardsEventHandler.bind(this);
+
     this.nextStep = this.nextStep.bind(this);
     this.prevStep = this.prevStep.bind(this);
   }
@@ -46,27 +64,30 @@ class App extends Component {
   
   }
 
-  addEducationObject(educationObject) {
-    this.state.educations.length === 0
-      ? this.setState((prevState) => ({
-          educations: [educationObject],
-        }))
-      : this.setState((prevState) => ({
-          educations: [...prevState.educations, educationObject],
-        }));
-  }
-  onChangeEducationHandler(uniqueKey, e) {
-    const newArr = this.state.educations.map((obj) => {
-      if (obj.key === uniqueKey) {
-        return { ...obj, [e.target.name]: e.target.value };
-      }
-      return obj;
-    });
+  educationsEventHandler(propertyName, e) {
+    const newEducationObject = {...this.state.educations};
+    newEducationObject[propertyName] = e.target.value;
     this.setState((prevState) => ({
-      educations: newArr,
+        educations:newEducationObject
     }));
+  
   }
-
+  workExperiencesEventHandler(propertyName, e) {
+    const newWorkExperienceObject = {...this.state.workExperiences};
+    newWorkExperienceObject[propertyName] = e.target.value;
+    this.setState((prevState) => ({
+        workExperiences:newWorkExperienceObject
+    }));
+  
+  }
+  honorsAwardsEventHandler(propertyName, e) {
+    const newHonorsObject = {...this.state.honorsAwards};
+    newHonorsObject[propertyName] = e.target.value;
+    this.setState((prevState) => ({
+        honorsAwards:newHonorsObject
+    }));
+  
+  }
  
 
 
@@ -78,8 +99,10 @@ class App extends Component {
           nextStep = {this.nextStep}
           prevStep={this.prevStep}
           personalEventHandler={this.personalEventHandler}
-          addEducationObject={this.addEducationObject}
-          onChangeEducationHandler={this.onChangeEducationHandler}
+          educationsEventHandler = {this.educationsEventHandler}
+          workExperiencesEventHandler = {this.workExperiencesEventHandler}
+          honorsAwardsEventHandler ={this.honorsAwardsEventHandler}
+         
         />
         <Display state={this.state} />
       </div>
