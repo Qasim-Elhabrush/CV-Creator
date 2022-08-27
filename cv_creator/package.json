@@ -1,6 +1,7 @@
 {
   "name": "cv_creator",
-  "version": "0.1.0",
+  "version": "0.1.0", 
+  "homepage": "http://Qasim-Elhabrush.github.io/CV_Creator",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -27,7 +28,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "http://Qasim-Elhabrush.github.io/CV_Creator",
+ 
   "browserslist": {
     "production": [
       ">0.2%",
