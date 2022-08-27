@@ -1,7 +1,7 @@
 {
   "name": "cv_creator",
   "version": "0.1.0", 
-  "homepage": "http://Qasim-Elhabrush.github.io/CV_Creator",
+  "homepage": "https://Qasim-Elhabrush.github.io/CV_Creator",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
