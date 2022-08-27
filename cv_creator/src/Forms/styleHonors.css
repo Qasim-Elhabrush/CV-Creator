@@ -2,7 +2,7 @@
     margin-top: 5%;
     align-self: center;
     display: grid;
-    grid-template-rows: 2.5em 1em 2.5em 2.5em;
+    grid-template-rows: 2em 1em 2em 2em;
     row-gap: 20%;
     min-width: 65%;
     max-width: 6em;

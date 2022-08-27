@@ -1,7 +1,7 @@
 #personalForm{
     align-self: center;
     display: grid;
-    grid-template-rows: repeat(3,2.75em);
+    grid-template-rows: repeat(3,2.25em);
     row-gap: 20%;
     min-width: 65%;
     max-width: 6em;
