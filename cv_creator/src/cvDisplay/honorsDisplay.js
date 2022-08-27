@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import moment from 'moment'
 class HonorsDisplay extends Component{
     constructor(props){
         super(props)
@@ -8,9 +9,9 @@ class HonorsDisplay extends Component{
     }
     render(){
         return(<div id="honorsDisplay">
-            <div>Name of Honor or Award: {this.props.nameOfAward}</div>
-            <div>Date Received: {this.props.dateReceived}</div>
-            <div>Description of Award: {this.props.description}</div>
+            <div className="textContent"><strong>{this.props.nameOfAward}</strong></div>
+            <div className="textContent dates">{moment(this.props.dateReceived).format("M-YYYY")}</div>
+            <div className="textContent">{this.props.description}</div>
             
 
 

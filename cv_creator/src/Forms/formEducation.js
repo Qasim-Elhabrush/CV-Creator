@@ -9,13 +9,16 @@ class EducationForm extends Component {
 
   render() {
     return (
-      <div className="formContainer">        
+      <div className="formContainer">       
+       <div className="formTitle">Education</div>  
         <form id="educationForm">
+      
           <input
             type="text"
             name="nameOfSchool"
             className="nameOfSchoolInput"
             placeholder="Name of School or Program"
+            value = {this.props.state.educations.nameOfSchool}
             onChange={e=>{this.props.onChangeEducationHandler("nameOfSchool",e);}}
               
           ></input>
@@ -24,6 +27,7 @@ class EducationForm extends Component {
             type="text"
             name="major"
             placeholder="Major - (ex. B.S Psychology)"
+            value = {this.props.state.educations.major}
             onChange={e=>{this.props.onChangeEducationHandler("major",e);}}
           ></input>
 
@@ -31,7 +35,8 @@ class EducationForm extends Component {
             type="text"
             name="gpa"
             className="GPA"
-            placeholder="GPA(optional)"
+            placeholder="GPA"
+            value = {this.props.state.educations.gpa}
             onChange={e=>{this.props.onChangeEducationHandler("gpa",e);}}
           ></input>
 
@@ -40,6 +45,7 @@ class EducationForm extends Component {
             type="month"
             name="startDate"
             className="EducationStartDateInput"
+            value = {this.props.state.educations.startDate}
             onChange={e=>{this.props.onChangeEducationHandler("startDate",e);}}
           ></input>
 
@@ -48,6 +54,7 @@ class EducationForm extends Component {
             type="month"
             name="endDate"
             className="EducationEndDateInput"
+            value = {this.props.state.educations.endDate}
             onChange={e=>{this.props.onChangeEducationHandler("endDate",e);}}
           ></input>
         </form>

@@ -1,7 +1,7 @@
 #workExperienceForm{
     align-self: center;
     display: grid;
-    grid-template-rows: 2em 1em 2em 1em 2em 2em;
+    grid-template-rows: 2.5em 1.5em 2.5em 1.5em 2.5em 2.5em;
     row-gap: 15%;
     min-width: 65%;
     max-width: 6em;
@@ -10,6 +10,6 @@
 .workResponsibilityInput{
     margin-top: 1em;
     resize: vertical;
-    min-height: 2em;
+    min-height: 4em;
     max-height: 8em;
 }

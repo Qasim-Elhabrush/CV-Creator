@@ -13,16 +13,29 @@ class HonorsForm extends Component {
             type="text"
             id="honorName"
             placeholder="Name Honor or Award"
-            onChange={e=>{this.props.honorsAwardsEventHandler("awardName",e);}}
+            value={this.props.state.honorsAwards.awardName}
+            onChange={(e) => {
+              this.props.honorsAwardsEventHandler("awardName", e);
+            }}
           ></input>
 
           <label>Date Received</label>
-          <input type="month" id="honorReceivedDate"  onChange={e=>{this.props.honorsAwardsEventHandler("dateReceived",e);}}></input>
+          <input
+            type="month"
+            id="honorReceivedDate"
+            value ={this.props.state.honorsAwards.dateReceived}
+            onChange={(e) => {
+              this.props.honorsAwardsEventHandler("dateReceived", e);
+            }}
+          ></input>
           <textarea
             type="text"
             id="honorDescription"
             placeholder="Description of Award"
-            onChange={e=>{this.props.honorsAwardsEventHandler("description",e);}}
+            value ={this.props.state.honorsAwards.description}
+            onChange={(e) => {
+              this.props.honorsAwardsEventHandler("description", e);
+            }}
           ></textarea>
         </form>
       </div>

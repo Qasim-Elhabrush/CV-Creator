@@ -1,8 +1,8 @@
 #educationForm{
     align-self: center;
     display: grid;
-    grid-template-rows: 2em 2em 2em 1em 2em 1em 2em;
-    row-gap: 15%;
+    grid-template-rows: 2.5em 2.5em 2.5em 1.5em 2.5em 1.5em 2.5em;
+    row-gap: 12%;
     min-width: 65%;
     max-width: 6em;
 

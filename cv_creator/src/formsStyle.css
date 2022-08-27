@@ -5,6 +5,7 @@
     border-style:solid;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 
 }
 .formContainer{width: 90%;
@@ -17,3 +18,23 @@
     text-align: center;
     margin-bottom: 5%;
 }
+#lColumn{
+    width:100%;
+    max-height: 95%;
+    overflow: hidden;
+   
+}
+button{
+  position:relative;
+  bottom: 17%;
+  left:28%;
+    width: 20%;
+    height:5%;
+    border-radius: 20px;
+    background-color: rgb(107, 222, 107);
+    margin: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  #firstNext{
+    margin-left: 15%;
+  }

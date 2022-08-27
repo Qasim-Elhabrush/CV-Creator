@@ -13,50 +13,52 @@ class Forms extends Component {
     switch (this.props.state.step) {
       case 1:
         return (
-          <div>
+          <div id="lColumn">
             <div id="formsContainer">
               <PersonalForm
                 state={this.props.state}
                 personalEventHandler={this.props.personalEventHandler}
               />
             </div>
-            <button onClick={this.props.nextStep}>Next</button>
+            <button id="firstNext" onClick={this.props.nextStep}>Next</button>
           </div>
         );
       case 2:
         return (
-          <div>
+          <div id="lColumn">
             <div id="formsContainer">
-            <div className="formTitle">Education</div>
               <EducationForm
                 state={this.props.state}
                 onChangeEducationHandler={this.props.educationsEventHandler}
               />
             </div>
-            
-
             <button onClick={this.props.prevStep}>Back</button>
             <button onClick={this.props.nextStep}>Next</button>
           </div>
         );
       case 3:
         return (
-          <div>
+          <div id="lColumn">
             <div id="formsContainer">
-              <WorkExperienceForm state={this.props.state}
-              workExperiencesEventHandler = {this.props.workExperiencesEventHandler}
-              
+              <WorkExperienceForm
+                state={this.props.state}
+                workExperiencesEventHandler={
+                  this.props.workExperiencesEventHandler
+                }
               />
             </div>
-            <button onClick={this.props.prevStep}>Back</button>{" "}
+            <button onClick={this.props.prevStep}>Back</button>
             <button onClick={this.props.nextStep}>Next</button>
           </div>
         );
       case 4:
         return (
-          <div>
+          <div id="lColumn">
             <div id="formsContainer">
-              <HonorsForm state={this.props.state} honorsAwardsEventHandler={this.props.honorsAwardsEventHandler} />
+              <HonorsForm
+                state={this.props.state}
+                honorsAwardsEventHandler={this.props.honorsAwardsEventHandler}
+              />
             </div>
             <button onClick={this.props.prevStep}>Back</button>
           </div>

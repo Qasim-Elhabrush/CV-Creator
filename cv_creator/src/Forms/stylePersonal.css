@@ -1,7 +1,7 @@
 #personalForm{
     align-self: center;
     display: grid;
-    grid-template-rows: repeat(3,2em);
+    grid-template-rows: repeat(3,2.75em);
     row-gap: 20%;
     min-width: 65%;
     max-width: 6em;
@@ -10,7 +10,18 @@
 #descriptionInput{
     height:auto;
     min-height: 5em;
-   max-height:10em;
+   max-height:9em;
    resize: vertical;
 }
-
+#personalName{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+}
+#personalNumberEmail{
+    padding-top: 1%;
+    padding-bottom: 3%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
